@@ -1,0 +1,7 @@
+.banner-section {
+  background-color: rgb(199, 196, 196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
