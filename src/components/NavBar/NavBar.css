@@ -1,4 +1,35 @@
 .navbar {
   background-color: black;
   height: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.logo-section {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 110px;
+}
+
+.nav-links {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.links:hover {
+  color: rgb(99, 158, 29)
 }
