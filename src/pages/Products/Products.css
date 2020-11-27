@@ -21,6 +21,7 @@
   border: 2px solid rgb(236, 235, 235);
   border-radius: 10px;
   box-shadow: 5px 0px 5px 0px black;
+  margin: 10px;
 }
 
 .product-image {

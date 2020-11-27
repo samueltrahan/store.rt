@@ -36,6 +36,7 @@ export default function App() {
       <Route exact path="/products" render={() => 
       <div>
           <h1 className="product-heading">Products</h1>
+          <div className="product-app">
           <Products image={Pic01} price="$150.00" />
           <Products image={Pic02} price="$150.00" />
           <Products image={Pic03} price="$59.99" />
@@ -45,6 +46,7 @@ export default function App() {
           <Products image={Pic07} price="$150.00" />
           <Products image={Pic08} price="$80.00" />
           <Products image={Pic09} price="$120.00" />
+          </div>
       </div>
       }>
       </Route>
