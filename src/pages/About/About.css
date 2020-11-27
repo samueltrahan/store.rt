@@ -1,0 +1,30 @@
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  font-family: 'Sansita Swashed', cursive;
+  height: 550px;
+}
+
+.business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.how {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

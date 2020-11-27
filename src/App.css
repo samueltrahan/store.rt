@@ -9,3 +9,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.service-heading {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Sansita Swashed', cursive;
+}
+.footer-about {
+  position: absolute;
+  bottom: 0;
+}

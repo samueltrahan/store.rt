@@ -48,21 +48,25 @@ export default function App() {
           <Products id={uuidv4()} image={Pic08} price="$80.00" />
           <Products id={uuidv4()} image={Pic09} price="$120.00" />
           </div>
+          <Footer />
       </div>
       }>
       </Route>
       <Route exact path="/services" render={() => 
       <div>
+        <h1 className="service-heading">Services</h1>
           <Services path="/helping" title="Helping People" content="What do you offer to people that can help them? Why should they want your services, and what sets you apart from others that do the same thing?"/>
           <Services path="/unqiue" title="Uniqueness" content="Is there something that is unique about your service that other businesses don't have?  Let's try to convey that."/>
           <Services path="/exceptional" title="Exceptional Services" content="Are your services a cut above the rest?  We want to show the customer that in this section so that it is undeniable that you are the right person for the job."/>
           <Services path="/special" title="Special" content="If you are running specials on services, or feel that you offer a special aspect to your service, let's showcase that here."/>
+          <Footer />
       </div>
       }>
       </Route>
       <Route exact path="/about" render={() => 
       <div>
           <About />
+          <Footer />
       </div>
       }>
       </Route>
