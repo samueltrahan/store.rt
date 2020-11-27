@@ -4,6 +4,7 @@ import './App.css';
 import Banner from './components/Banner/Banner';
 import Featured from './components/Featured/Featured';
 import Reason from './components/Reason/Reason';
+import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Banner />
       <Featured />
       <Reason />
+      <Footer />
     </div>
   )
 }

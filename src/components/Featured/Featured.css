@@ -18,6 +18,7 @@
 .featured-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100vw;
 }
 
 .featured-heading {

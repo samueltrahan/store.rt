@@ -1,0 +1,49 @@
+.footer-section {
+  background-color: black;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.copy-right {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copy {
+  color: white;
+}
+
+.design {
+  color: white
+}
+
+.samuel {
+  text-decoration: none;
+  color: white;
+}
+
+.samuel:hover {
+  color: rgb(99, 158, 29);
+}
+
+.socials {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+.social-links:hover {
+  color: rgb(99, 158, 29);
+}
+
