@@ -1,0 +1,46 @@
+.contact-page {
+  height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.message-section {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 20px;
+  font-family: 'Sansita Swashed', cursive;
+}
+
+.input {
+  width: 65%;
+}
+
+.message {
+  width: 75%;
+  height: 150px;
+}
+
+.email-section {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email-link {
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.email-link:hover {
+  color: rgb(99, 158, 29) ;
+}

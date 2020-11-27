@@ -73,6 +73,7 @@ export default function App() {
       <Route exact path="/contact" render={() => 
       <div>
           <Contact />
+          <Footer />
       </div>
       }>
       </Route>
