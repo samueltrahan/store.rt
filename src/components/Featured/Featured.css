@@ -1,0 +1,46 @@
+.featured {
+  height: 550px;
+  background-color: rgb(169, 163, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.featured-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured-heading {
+  background-color: rgb(169, 163, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-one {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  width: 470px;
+  border-radius: 30%;
+  opacity: .5;
+}
+
+.image-two {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image:hover {
+  opacity: 1.0;
+}
