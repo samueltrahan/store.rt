@@ -1,0 +1,13 @@
+.reason-section {
+  background-color: rgb(169, 163, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.reason-content {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 28px;
+  margin: 100px;
+}

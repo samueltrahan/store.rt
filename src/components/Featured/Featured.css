@@ -1,10 +1,18 @@
 .featured {
-  height: 550px;
+  height: 650px;
   background-color: rgb(169, 163, 163);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.featured:after {
+  content: '';
+  width: 85vw;
+  display: block;
+  border: 2px solid black;
+  margin-top: 100px;
 }
 
 .featured-section {
