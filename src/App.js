@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import Banner from './components/Banner/Banner';
@@ -37,22 +38,25 @@ export default function App() {
       <div>
           <h1 className="product-heading">Products</h1>
           <div className="product-app">
-          <Products image={Pic01} price="$150.00" />
-          <Products image={Pic02} price="$150.00" />
-          <Products image={Pic03} price="$59.99" />
-          <Products image={Pic04} price="$120.00" />
-          <Products image={Pic05} price="$160.00" />
-          <Products image={Pic06} price="$90.00" />
-          <Products image={Pic07} price="$150.00" />
-          <Products image={Pic08} price="$80.00" />
-          <Products image={Pic09} price="$120.00" />
+          <Products id={uuidv4()} image={Pic01} price="$150.00" />
+          <Products id={uuidv4()} image={Pic02} price="$150.00" />
+          <Products id={uuidv4()} image={Pic03} price="$59.99" />
+          <Products id={uuidv4()} image={Pic04} price="$120.00" />
+          <Products id={uuidv4()} image={Pic05} price="$160.00" />
+          <Products id={uuidv4()} image={Pic06} price="$90.00" />
+          <Products id={uuidv4()} image={Pic07} price="$150.00" />
+          <Products id={uuidv4()} image={Pic08} price="$80.00" />
+          <Products id={uuidv4()} image={Pic09} price="$120.00" />
           </div>
       </div>
       }>
       </Route>
       <Route exact path="/services" render={() => 
       <div>
-          <Services />
+          <Services path="/helping" title="Helping People" content="What do you offer to people that can help them? Why should they want your services, and what sets you apart from others that do the same thing?"/>
+          <Services path="/unqiue" title="Uniqueness" content="Is there something that is unique about your service that other businesses don't have?  Let's try to convey that."/>
+          <Services path="/exceptional" title="Exceptional Services" content="Are your services a cut above the rest?  We want to show the customer that in this section so that it is undeniable that you are the right person for the job."/>
+          <Services path="/special" title="Special" content="If you are running specials on services, or feel that you offer a special aspect to your service, let's showcase that here."/>
       </div>
       }>
       </Route>
