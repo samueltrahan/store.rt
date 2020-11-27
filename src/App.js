@@ -7,6 +7,9 @@ import Featured from './components/Featured/Featured';
 import Reason from './components/Reason/Reason';
 import Footer from './components/Footer/Footer';
 import Products from './pages/Products/Products';
+import Services from './pages/Services/Services';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 export default function App() {
   return (
@@ -24,6 +27,24 @@ export default function App() {
       <Route exact path="/products" render={() => 
       <div>
           <Products />
+      </div>
+      }>
+      </Route>
+      <Route exact path="/services" render={() => 
+      <div>
+          <Services />
+      </div>
+      }>
+      </Route>
+      <Route exact path="/about" render={() => 
+      <div>
+          <About />
+      </div>
+      }>
+      </Route>
+      <Route exact path="/contact" render={() => 
+      <div>
+          <Contact />
       </div>
       }>
       </Route>
