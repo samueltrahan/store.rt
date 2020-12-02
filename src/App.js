@@ -78,10 +78,9 @@ export default function App() {
       </div>
       }>
       </Route>
-      <Route path='/products/:id' render={() => {
+      <Route exact path='/products/:id' render={() => {
         <ProductDetails />
       }}>
-
       </Route>
     </Router>
   )

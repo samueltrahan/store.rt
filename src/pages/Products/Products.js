@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
@@ -10,8 +9,6 @@ import "./Products.css";
 toast.configure();
 
 export default function Products({ image, price, id }) {
-  // const { id } = useParams();
-  console.log(id)
   const handleToken = async (token, addresses) => {
     const response = await axios.post("/checkout", {
       token,
