@@ -11,6 +11,7 @@ import Products from './pages/Products/Products';
 import Services from './pages/Services/Services';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Pic01 from './Assets/shoe01.jpg';
 import Pic02 from './Assets/shoe02.jpg'
 import Pic03 from './Assets/shoe03.jpg'
@@ -76,6 +77,11 @@ export default function App() {
           <Footer />
       </div>
       }>
+      </Route>
+      <Route path='/products/:id' render={() => {
+        <ProductDetails />
+      }}>
+
       </Route>
     </Router>
   )

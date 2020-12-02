@@ -1,13 +1,17 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./Products.css";
 
 toast.configure();
 
 export default function Products({ image, price, id }) {
+  // const { id } = useParams();
+  console.log(id)
   const handleToken = async (token, addresses) => {
     const response = await axios.post("/checkout", {
       token,
@@ -23,7 +27,8 @@ export default function Products({ image, price, id }) {
   };
 
   return (
-    <Link to={id} className="product-section">
+    <Link to={`/products/${id}`} className="product-section">
+      <ToastContainer />
       <div className="product-card">
         <div className="image-section">
           <img className="product-image" alt="" src={image}></img>
