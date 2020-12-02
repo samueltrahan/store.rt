@@ -2,7 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const stripe = require("stripe")('sk_test_51HtxUMHNTB4gu9aGTEXSkeNEVDqxpHU07XufAMle2CdGQvaBJtx1RkcFTpvtxhZ52eK4qh834cKs1BzxePdyFCEZ00rgKLRQZT');
 
-const uuid = require("uuid/v4");
+const {v4: uuidv4} = require("uuid");
 
 
 const app = express();
@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/checkout', async (req, res) => {
-  console.log("Request", req.body);
 
   let error;
   let status;
@@ -29,13 +28,13 @@ app.post('/checkout', async (req, res) => {
     });
 
 
-    const idempotency_key = uuid();
+    const idempotencyKey = uuidv4();
     const charge = await stripe.charges.create({
-      amound: product.price * 100,
-      curreny: "usd",
+      amount: product.price * 100,
+      currency: "usd",
       customer: customer.id,
       receipt_email: token.email,
-      description: `Purchased the ${product.name}`,
+      description: `Purchased the `,
       shipping: {
         name: token.card.name,
         address: {
@@ -48,11 +47,11 @@ app.post('/checkout', async (req, res) => {
       }
     },
     {
-      idempotency_key
+      idempotencyKey
     }
     );
     console.log("Charge", { charge});
-    status="succss";
+    status="success";
   } catch (error) {
     console.error("Error", error);
     status = "failure"

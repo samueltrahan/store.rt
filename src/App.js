@@ -38,15 +38,15 @@ export default function App() {
       <div>
           <h1 className="product-heading">Products</h1>
           <div className="product-app">
-          <Products id={uuidv4()} image={Pic01} price="$150.00" />
-          <Products id={uuidv4()} image={Pic02} price="$150.00" />
-          <Products id={uuidv4()} image={Pic03} price="$59.99" />
-          <Products id={uuidv4()} image={Pic04} price="$120.00" />
-          <Products id={uuidv4()} image={Pic05} price="$160.00" />
-          <Products id={uuidv4()} image={Pic06} price="$90.00" />
-          <Products id={uuidv4()} image={Pic07} price="$150.00" />
-          <Products id={uuidv4()} image={Pic08} price="$80.00" />
-          <Products id={uuidv4()} image={Pic09} price="$120.00" />
+          <Products id={uuidv4()} image={Pic01} price={150} />
+          <Products id={uuidv4()} image={Pic02} price={150} />
+          <Products id={uuidv4()} image={Pic03} price={59} />
+          <Products id={uuidv4()} image={Pic04} price={120} />
+          <Products id={uuidv4()} image={Pic05} price={160} />
+          <Products id={uuidv4()} image={Pic06} price={90} />
+          <Products id={uuidv4()} image={Pic07} price={150} />
+          <Products id={uuidv4()} image={Pic08} price={80} />
+          <Products id={uuidv4()} image={Pic09} price={120} />
           </div>
           <Footer />
       </div>
