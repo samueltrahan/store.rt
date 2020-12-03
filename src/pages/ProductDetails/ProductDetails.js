@@ -1,11 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 export default function ProductDetails() {
 
-
-  useEffect(() => {
-    console.log('!!!!!!!!!')
-  }, [])
   return (
     <div>
      <h1>Product Details</h1>

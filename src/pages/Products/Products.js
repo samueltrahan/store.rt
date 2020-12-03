@@ -8,11 +8,11 @@ import "./Products.css";
 
 toast.configure();
 
-export default function Products({ image, price, id }) {
+export default function Products({ product }) {
   const handleToken = async (token, addresses) => {
     const response = await axios.post("/checkout", {
       token,
-      product: { price },
+      product:  product.price
     });
     const { status } = response.data;
     console.log(status);
@@ -24,21 +24,22 @@ export default function Products({ image, price, id }) {
   };
 
   return (
-    <Link to={`/products/${id}`} className="product-section">
+    <Link to={`/products/${product.id}`} className="product-section">
       <ToastContainer />
       <div className="product-card">
         <div className="image-section">
-          <img className="product-image" alt="" src={image}></img>
+          <img className="product-image" alt="" src={product.image}></img>
         </div>
         <div>
-          <h2>${price}.00</h2>
+          <h2>{product.name}</h2>
+          <h2>${product.price}.00</h2>
         </div>
         <StripeCheckout
           stripeKey="pk_test_51HtxUMHNTB4gu9aGx5RGz2s3fr5gdUchQxQzs26a7O6yQe1xczX4P3Zt3m3QREvDjTDK9cAu2lMUy6Tl0mX2GSgR00eEsn9dH4"
           token={handleToken}
           billingAddress
           shippingAddress
-          amount={price * 100}
+          amount={product.price * 100}
         />
       </div>
     </Link>

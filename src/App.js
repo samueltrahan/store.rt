@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import NavBar from "./components/NavBar/NavBar";
@@ -21,23 +21,11 @@ import Pic06 from "./Assets/shoe06.jpg";
 import Pic07 from "./Assets/shoe07.jpg";
 import Pic08 from "./Assets/shoe08.jpg";
 import Pic09 from "./Assets/shoe09.jpg";
-import products from './ProductDB';
+import products from "./ProductDB";
 
 export default function App() {
-  const [name, setName] = useState('')
-  const [price, setPrice] = useState(null)
-  const [image, setImage] = useState()
 
-  useEffect(() => {
-    products.map(product => {
-        setName(product.name)
-        setPrice(product.price)
-        setImage(products.image)
-        
-    })
-  }, [])
 
-  
   return (
     <Router>
       <NavBar />
@@ -60,16 +48,14 @@ export default function App() {
           <div>
             <h1 className="product-heading">Products</h1>
             <div className="product-app">
-              <Products id={uuidv4()} name={name} image={image} price={price} />
-              {/* <Products id={uuidv4()} image={Pic02} price={150} />
-              <Products id={uuidv4()} image={Pic03} price={59} />
-              <Products id={uuidv4()} image={Pic04} price={120} />
-              <Products id={uuidv4()} image={Pic05} price={160} />
-              <Products id={uuidv4()} image={Pic06} price={90} />
-              <Products id={uuidv4()} image={Pic07} price={150} />
-              <Products id={uuidv4()} image={Pic08} price={80} />
-              <Products id={uuidv4()} image={Pic09} price={120} /> */}
-            </div>
+            {products.map((product) => {
+              return (
+                <div>
+                  <Products product={product} />
+              </div>
+                )
+              })}
+              </div>;
             <Footer />
           </div>
         )}
@@ -129,7 +115,7 @@ export default function App() {
         path="/products/:id"
         render={() => (
           <div>
-            <ProductDetails />
+            <ProductDetails products={products} />
           </div>
         )}
       ></Route>
