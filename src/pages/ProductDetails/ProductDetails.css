@@ -1,0 +1,27 @@
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.shoe-section {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px;
+  border-right: 2px solid rgb(186, 184, 184);
+}
+
+.product-detail-image {
+  width: 580px;
+  margin-right: 20px;
+}
+
+.pay-section {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

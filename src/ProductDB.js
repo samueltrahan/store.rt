@@ -13,13 +13,13 @@ import { v4 as uuidv4 } from "uuid";
 
 const products = [
   {
-    "name": "Air Dunks",
+    "name": "Nike Air Dunks",
     "price": 150,
     "image": Pic01,
     "id": uuidv4()
   },
   {
-    "name": "Air Max",
+    "name": "Nike Air Max",
     "price": 150,
     "image": Pic02,
     "id": uuidv4()
@@ -61,7 +61,7 @@ const products = [
     "id": uuidv4()
   },
   {
-    "name": "Air Max",
+    "name": "Nike Air Max",
     "price": 120,
     "image": Pic09,
     "id": uuidv4()

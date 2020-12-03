@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
@@ -12,19 +11,15 @@ import Services from "./pages/Services/Services";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import Pic01 from "./Assets/shoe01.jpg";
-import Pic02 from "./Assets/shoe02.jpg";
-import Pic03 from "./Assets/shoe03.jpg";
-import Pic04 from "./Assets/shoe04.jpg";
-import Pic05 from "./Assets/shoe05.jpg";
-import Pic06 from "./Assets/shoe06.jpg";
-import Pic07 from "./Assets/shoe07.jpg";
-import Pic08 from "./Assets/shoe08.jpg";
-import Pic09 from "./Assets/shoe09.jpg";
 import products from "./ProductDB";
 
 export default function App() {
-
+  const [shoes, setShoes] = useState();
+  
+  const handleFindProduct = (e, productId) => {
+    const results = products.find(({ id }) => productId === id);
+    setShoes(results)
+  };
 
   return (
     <Router>
@@ -48,14 +43,18 @@ export default function App() {
           <div>
             <h1 className="product-heading">Products</h1>
             <div className="product-app">
-            {products.map((product) => {
-              return (
-                <div>
-                  <Products product={product} />
-              </div>
-                )
+              {products.map((product) => {
+                return (
+                  <div>
+                    <Products
+                      product={product}
+                      handleFindProduct={handleFindProduct}
+                    />
+                  </div>
+                );
               })}
-              </div>;
+            </div>
+            ;
             <Footer />
           </div>
         )}
@@ -115,7 +114,7 @@ export default function App() {
         path="/products/:id"
         render={() => (
           <div>
-            <ProductDetails products={products} />
+            <ProductDetails shoes={shoes} />
           </div>
         )}
       ></Route>
